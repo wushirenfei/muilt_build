@@ -1,0 +1,5 @@
+FROM python:3.5.2
+WORKDIR /web_one
+ADD . /web_one
+RUN pip install -r requirements.txt -i https://pypi.douban.com/simple
+CMD ["python", "web_one.py"]

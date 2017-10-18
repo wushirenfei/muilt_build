@@ -1,0 +1,6 @@
+FROM python:3.5.2
+WORKDIR /web_two
+ADD requirements.txt /web_two
+RUN pip install -r requirements.txt -i https://pypi.douban.com/simple
+ADD . /web_two
+CMD ["python", "web_two.py"]
